@@ -10,7 +10,7 @@ find_package(Zephyr REQUIRED HINTS $ENV{ZEPHYR_BASE})
 project(audio-offload)
 
 # NORDIC SDK APP START
-target_sources(app PRIVATE src/main.c)
+target_sources(app PRIVATE src/main.c src/audio.c src/util.c)
 # NORDIC SDK APP END
 
 target_sources_ifdef(CONFIG_CLI_SAMPLE_MULTIPROTOCOL app PRIVATE src/ble.c)
